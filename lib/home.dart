@@ -16,27 +16,22 @@ class HomePage extends StatefulWidget {
 class _HomePage extends State<HomePage>
     with SingleTickerProviderStateMixin {
 
-//final AudioCache _audio = AudioCache(prefix: 'audio/');
 AudioPlayer audioPlayer = new AudioPlayer();
 
  @override
   void initState() {
     super.initState();
       play();
-    //_audio.clear('background.mp3');
-    //_audio.loop('background.mp3');
     
   }
 
 
   Future<void> play() async {
   await audioPlayer.play("assets/audio/background.mp3");
-   //setState(() => playerState = PlayerState.playing);
 }
 
 Future<void> pause() async {
   await audioPlayer.pause();
-  //setState(() => playerState = PlayerState.paused);
 }
 
 Future<void> stop() async {
@@ -61,17 +56,6 @@ Future<void> stop() async {
       ),
     );
 
-    /* final settings = FlatButton(
-        child:Hero(
-          tag: 'settings',
-          child: CircleAvatar(
-            backgroundColor: Colors.transparent,
-            radius: 60.0,
-            child: Image.asset('assets/images/ic_launcher.png'),
-            
-          ),
-        )
-     ); */
 
      final logoLabel = FlatButton(
       child: Text(
