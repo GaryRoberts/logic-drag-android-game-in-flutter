@@ -148,7 +148,7 @@ Widget _draggingMode(int number)
                 ),
                 color: Colors.red,
               ),
-            //childWhenDragging:_draggingModeOperator(info),
+          
            ));
   }
 
@@ -230,8 +230,7 @@ return WillPopScope(
           padding: EdgeInsets.only(left: 10.0, right: 10.0),
           children: <Widget>[
             Text("Timer: "+"$_start"+" secs                  Score:"+"$_score", style: TextStyle(color: Colors.white, fontSize: 20.0)),
-            //Text("$_start"),
-
+           
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -298,7 +297,7 @@ return WillPopScope(
                         scaffoldKey.currentState.showSnackBar(SnackBar(content: Text("Not a number.Operator found")));
                       }
                      else{
-                        //scaffoldKey.currentState.showSnackBar(SnackBar(content: Text(_dataPassed.toString())));
+                       
                         setState(() {
                            _number1=_dataPassed; 
                            _dataPassed = null;
@@ -350,8 +349,7 @@ return WillPopScope(
                         scaffoldKey.currentState.showSnackBar(SnackBar(content: Text("Not an operator")));
                       }
                       else{
-                
-                      //scaffoldKey.currentState.showSnackBar(SnackBar(content: Text(_operation.toString())));
+
                       setState(() { _sign=_operation; });
                      } 
                     },
@@ -382,8 +380,7 @@ return WillPopScope(
                         scaffoldKey.currentState.showSnackBar(SnackBar(content: Text("Not a number.Operator found")));
                       }
                      else{
-                      // number2=_dataPassed;
-                       //scaffoldKey.currentState.showSnackBar(SnackBar(content: Text(_dataPassed.toString())));
+                    
                        setState(() { 
                          _number2=_dataPassed; 
                          _dataPassed = null;
@@ -424,7 +421,7 @@ return WillPopScope(
                     },
                     onAccept: (_dataPassed) {
                        setState(() { _userAnswer=_dataPassed; });
-                       // scaffoldKey.currentState.showSnackBar(SnackBar(content: Text(_userAnswer.toString())));
+                   
                        if(_sign==null || _number1==null || _number2==null) {
                          scaffoldKey.currentState.showSnackBar(SnackBar(content: Text("2 numbers and operator required")));
                        }
